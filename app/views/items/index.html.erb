@@ -4,7 +4,11 @@
     <%= form_tag("/items", method: "get") do%>
         <%= select_tag "store", options_from_collection_for_select(@stores, "id", "name"), include_blank: true%>
 
-        <%= select_tag "category", options_for_select(["Jeans", "Shirts", "Jackets"]), include_blank: true%>
+        <%= select_tag "category", options_for_select(["jeans", "shirt", "jacket"]), include_blank: true%>
+
+        <%= select_tag "size", options_for_select(["S", "M", "L"]), include_blank: true%>
+
+        <%= select_tag "gender", options_for_select(["F", "M"]), include_blank: true%>
 
 
         <%=submit_tag "Filter"%>
@@ -26,7 +30,10 @@
     <%=item.size%> <br>
  
     <label>Gender:</label>
-    <%=item.gender%> <br><br>
+    <%=item.gender%> <br>
+
+    <label>Store:</label>
+    <%=item.store.name%> <br><br>
 <%end%>
 </ul>
 
