@@ -23,9 +23,13 @@ class UsersController < ApplicationController
 
     def edit
         @user = User.find(params[:id])
+        # raise @user.inspect
+        @address = @user.address
+        # raise @address.inspect
     end
 
     def update
+        # raise params.inspect
         @user = User.find(params[:id])
         @user.update(user_params)
 
@@ -45,7 +49,7 @@ class UsersController < ApplicationController
             :email, 
             :phone, 
             :dob,
-            addresses_attributes: [
+            address_attributes: [
                 :street_address,
                 :city,
                 :state,

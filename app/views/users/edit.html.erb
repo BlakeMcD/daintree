@@ -17,21 +17,21 @@
 
 
 
-    <%= f.fields_for :addresses do |addr| %>
+    <%= f.fields_for :address do |addr| %>
         <%= addr.label :street_address %>
-        <%= addr.text_field :street_address %><br>
+        <%= addr.text_field :street_address, placeholder: @address.street_address %><br>
 
         <%= addr.label :city %>
-        <%= addr.text_field :city %><br>
+        <%= addr.text_field :city, placeholder: @address.city %><br>
 
         <%= addr.label :state %>
-        <%= addr.text_field :state %><br>
+        <%= addr.text_field :state, placeholder: @address.state %><br>
 
         <%= addr.label :postcode %>
-        <%= addr.text_field :postcode %><br>
+        <%= addr.text_field :postcode, placeholder: @address.postcode %><br>
 
         <%= addr.label :address_type %>
-        <%= addr.text_field :address_type %><br>
+        <%= addr.text_field :address_type, placeholder: @address.address_type %><br>
     <%end%>
 
     <%=f.submit "Submit Changes"%>

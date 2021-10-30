@@ -1,15 +1,10 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 #User
 User.create(first_name: 'Peter', last_name: 'Parker', email: 'peterparker@gmail.com', phone: '0491 570 156', dob: 20010810)
 User.create(first_name: 'Tony', last_name: 'Stark', email: 'tonystark@yahoo.com', phone: '0491 570 006', dob: 19700529)
-User.create(first_name: 'Steve', last_name: 'Rogers', email: 'steverogers@hotmail.com', phone: '0491 570 313', dob: 1918064)
+User.create(first_name: 'Steve', last_name: 'Rogers', email: 'steverogers@hotmail.com', phone: '0491 570 313', dob: 19180604)
 
 #Store
 Store.create(name: 'Pact', description: 'Patagonia, one of the earliest defenders of environmental ethics in the industry, was also one of the first to use recycled materials and switch to organic cotton.')
@@ -99,5 +94,3 @@ address_two.save
 
 address_three = u3.build_address(street_address:'35 Raglan Street', city: 'Tingoora', state: 'VIC', postcode: 3507, address_type: 'home')
 address_three.save
-# u2.address.create(street_address:'57 Bayview Close', city: 'Tieri', state: 'QLD', postcode: 4709, address_type: 'home')
-# u3.address.create(street_address:'35 Raglan Street', city: 'Tingoora', state: 'VIC', postcode: 3507, address_type: 'home')
