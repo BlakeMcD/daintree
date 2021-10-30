@@ -4,6 +4,8 @@
     <%= form_tag("/items", method: "get") do%>
         <%= select_tag "store", options_from_collection_for_select(@stores, "id", "name"), include_blank: true%>
 
+        <%= select_tag "category", options_for_select(["Jeans", "Shirts", "Jackets"]), include_blank: true%>
+
         <%=submit_tag "Filter"%>
     <%end%>
 
