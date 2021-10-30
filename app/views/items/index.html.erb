@@ -1,24 +1,29 @@
 <h1>All Items</h1>
 
+<h3>Filter Items</h3>
+    <%= form_tag("/items", method: "get") do%>
+        <%= select_tag "store", options_from_collection_for_select(@stores, "id", "name"), include_blank: true%>
+
+        <%=submit_tag "Filter"%>
+    <%end%>
+
 <ul>
 <%=@items.each do |item|%>
-    <label>Category:</label>
-    <%=item.category%>
 
     <label>Sub-Category:</label>
-    <%=item.sub_category%>
+    <%=item.sub_category%> <br>
 
     <label>Stock:</label>
-    <%=item.stock%>
+    <%=item.stock%> <br>
 
     <label>Description:</label>
-    <%=item.description%>
+    <%=item.description%> <br>
 
     <label>Size:</label>
-    <%=item.size%>
-
+    <%=item.size%> <br>
+ 
     <label>Gender:</label>
-    <%=item.gender%>
+    <%=item.gender%> <br><br>
 <%end%>
 </ul>
 
