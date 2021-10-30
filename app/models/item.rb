@@ -3,7 +3,7 @@ class Item < ApplicationRecord
     belongs_to :user, optional:true
 
     def self.by_store(store_id)
-        where(store: store_id)
+        where(store: store_id, sub_category: "jeans") 
     end
 
     def self.jeans
