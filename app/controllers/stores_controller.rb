@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-    before_action :require_login, :except => [:index, :show]
+    # before_action :require_login, :except => [:index, :show]
 
 
     def index
@@ -30,9 +30,9 @@ class StoresController < ApplicationController
         redirect_to stores_path
     end
 
-    def require_login
-        return_head(:forbidden) unless session.include? :store_name
-    end
+    # def require_login
+    #     return_head(:forbidden) unless session.include? :store_name
+    # end
 
     private
 
