@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_112830) do
     t.string "category"
     t.string "sub_category"
     t.integer "stock"
+    t.integer "price_cents"
     t.string "description"
     t.string "size"
     t.string "gender"

@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.1]
       t.string :category
       t.string :sub_category
       t.integer :stock
+      t.integer :price_cents
       t.string :description
       t.string :size
       t.string :gender

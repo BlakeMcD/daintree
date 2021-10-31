@@ -23,6 +23,9 @@
     <label>Stock:</label>
     <%=item.stock%> <br>
 
+    <label>Price:</label>
+    <%= number_to_currency item.price_cents / 100.0 %> <br>
+
     <label>Description:</label>
     <%=item.description%> <br>
 

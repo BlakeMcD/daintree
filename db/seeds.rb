@@ -17,69 +17,69 @@ s2 = Store.find_by id:2
 s3 = Store.find_by id:3
 
     # sub_category: jeans
-    new_item1s1ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, description: 'blue jeans', size: 'S', gender: 'M')
+    new_item1s1ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, price_cents: 3654, description: 'blue jeans', size: 'S', gender: 'M')
     new_item1s1ijeans.save
-    new_item1s2ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'M', gender: 'F')
+    new_item1s2ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 5678, description:'blue jeans', size: 'M', gender: 'F')
     new_item1s2ijeans.save
-    new_item1s3ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'L', gender: 'M')
+    new_item1s3ijeans = s1.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 5567, description:'blue jeans', size: 'L', gender: 'M')
     new_item1s3ijeans.save
 
-    new_item2s1ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, description: 'blue jeans', size: 'S', gender: 'F')
+    new_item2s1ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, price_cents: 5675, description: 'blue jeans', size: 'S', gender: 'F')
     new_item2s1ijeans.save
-    new_item2s2ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'M', gender: 'F')
+    new_item2s2ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 5776, description:'blue jeans', size: 'M', gender: 'F')
     new_item2s2ijeans.save
-    new_item2s3ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'L', gender: 'M')
+    new_item2s3ijeans = s2.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 4567, description:'blue jeans', size: 'L', gender: 'M')
     new_item2s3ijeans.save
 
-    new_item3s1ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, description: 'blue jeans', size: 'S', gender: 'M')
+    new_item3s1ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 4, price_cents: 5476, description: 'blue jeans', size: 'S', gender: 'M')
     new_item3s1ijeans.save
-    new_item3s2ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'M', gender: 'M')
+    new_item3s2ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 6747, description:'blue jeans', size: 'M', gender: 'M')
     new_item3s2ijeans.save
-    new_item3s3ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, description:'blue jeans', size: 'L', gender: 'F')
+    new_item3s3ijeans = s3.items.build(category: 'clothes', sub_category: 'jeans', stock: 6, price_cents: 3456, description:'blue jeans', size: 'L', gender: 'F')
     new_item3s3ijeans.save
     
     # #sub_category: shirt
-    new_item1s1ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'S', gender: 'F')
+    new_item1s1ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 6987, description:'green shirt', size: 'S', gender: 'F')
     new_item1s1ishirt.save
-    new_item1s2ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'M', gender: 'F')
+    new_item1s2ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 6897, description:'green shirt', size: 'M', gender: 'F')
     new_item1s2ishirt.save
-    new_item1s3ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'L', gender: 'M')
+    new_item1s3ishirt = s1.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 3566, description:'green shirt', size: 'L', gender: 'M')
     new_item1s3ishirt.save
 
-    new_item2s1ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'S', gender: 'F')
+    new_item2s1ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 5678, description:'green shirt', size: 'S', gender: 'F')
     new_item2s1ishirt.save
-    new_item2s2ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'M', gender: 'M')
+    new_item2s2ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 5564, description:'green shirt', size: 'M', gender: 'M')
     new_item2s2ishirt.save
-    new_item2s3ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'L', gender: 'F')
+    new_item2s3ishirt = s2.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 3565, description:'green shirt', size: 'L', gender: 'F')
     new_item2s3ishirt.save
 
-    new_item3s1ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'S', gender: 'M')
+    new_item3s1ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 3566, description:'green shirt', size: 'S', gender: 'M')
     new_item3s1ishirt.save
-    new_item3s2ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'M', gender: 'F')
+    new_item3s2ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 5366, description:'green shirt', size: 'M', gender: 'F')
     new_item3s2ishirt.save
-    new_item3s3ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, description:'green shirt', size: 'L', gender: 'M')
+    new_item3s3ishirt = s3.items.build(category: 'clothes', sub_category: 'shirt', stock: 4, price_cents: 3455, description:'green shirt', size: 'L', gender: 'M')
     new_item3s3ishirt.save
 
     # # #sub_category: jacket
-    new_item1s1ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'S', gender: 'F')
+    new_item1s1ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 8576, description:'suede jacket', size: 'S', gender: 'F')
     new_item1s1ijacket.save
-    new_item1s2ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'M', gender: 'F')
+    new_item1s2ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 4567, description:'suede jacket', size: 'M', gender: 'F')
     new_item1s2ijacket.save
-    new_item1s3ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, description:'suede jacket', size: 'L', gender: 'M')
+    new_item1s3ijacket = s1.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, price_cents: 4767, description:'suede jacket', size: 'L', gender: 'M')
     new_item1s3ijacket.save
 
-    new_item2s1ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'S', gender: 'M')
+    new_item2s1ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 4657, description:'suede jacket', size: 'S', gender: 'M')
     new_item2s1ijacket.save
-    new_item2s2ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'M', gender: 'F')
+    new_item2s2ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 7465, description:'suede jacket', size: 'M', gender: 'F')
     new_item2s2ijacket.save
-    new_item2s3ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, description:'suede jacket', size: 'L', gender: 'F')
+    new_item2s3ijacket = s2.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, price_cents: 5346, description:'suede jacket', size: 'L', gender: 'F')
     new_item2s3ijacket.save
 
-    new_item3s1ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'S', gender: 'F')
+    new_item3s1ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 2345, description:'suede jacket', size: 'S', gender: 'F')
     new_item3s1ijacket.save
-    new_item3s2ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, description:'suede jacket', size: 'M', gender: 'M')
+    new_item3s2ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 4, price_cents: 6578, description:'suede jacket', size: 'M', gender: 'M')
     new_item3s2ijacket.save
-    new_item3s3ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, description:'suede jacket', size: 'L', gender: 'F')
+    new_item3s3ijacket = s3.items.build(category: 'clothes', sub_category: 'jacket', stock: 6, price_cents: 4765, description:'suede jacket', size: 'L', gender: 'F')
     new_item3s3ijacket.save
 
 #Address

@@ -1,1 +1,17 @@
 <%= select_tag "category", options_for_select(["Jeans", "Shirts", "Jackets"]), include_blank: true%>
+
+<%= select_tag "category", options_from_collection_for_select(@all_items, "id", "sub_category"), include_blank: true%>
+
+
+    <%= select_tag "category", options_for_select(@all_items.pluck(:sub_category).uniq), include_blank: true%>
+
+
+How to make a search where it matches both conditions, 
+     def self.by_store(store_id)
+        where(store: store_id, sub_category: "jeans") 
+    end
+
+
+    
+    <label>Price:</label>
+    <%= number_to_currency item.price_cents / 100.0 %> <br>
