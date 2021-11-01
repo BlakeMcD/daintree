@@ -1,4 +1,10 @@
 class ItemsController < ApplicationController
+    before_action :initialize_session
+    before_action :increment_visit_count
+    before_action :load_cart
+
+    def about
+    end
 
     def index
 
@@ -47,14 +53,35 @@ class ItemsController < ApplicationController
     end
 
     def add_to_cart
-        @item = Item.find(params[:id])  #get the item from the path
+        id = params[:id].to_i
+        # raise params.inspect
+        session[:cart] << id unless session[:cart].include?(id)
+        redirect_to '/items'
+    end
 
-        #retrieve the cart, or if one doesn't exist, create one
-        cart = session[:cart] ||= []
-        cart << @item.id
+    def remove_from_cart    
+        id = params[:id].to_i
+        session[:cart] -= [id]
 
-        #Save the cart in the session
-        session[:cart] = cart
+        redirect_to '/items'
 
     end
+
+    private
+
+    def initialize_session
+        session[:visit_count] ||= 0
+        session[:visit_count] += 1
+
+        session[:cart] ||= []
+    end
+
+    def increment_visit_count
+        @visit_count = session[:visit_count] #for learning, will remove later
+    end
+
+    def load_cart
+        @cart = Item.find(session[:cart])
+    end
+
 end
