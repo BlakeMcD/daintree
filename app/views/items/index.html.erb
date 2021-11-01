@@ -1,5 +1,16 @@
 <h1>All Items</h1>
 
+<h3>Your Cart</h3>
+<details>
+    <ul>
+        <%@cart.each do |item|%>
+        <li><%=item.sub_category%></li>
+        <p><%= link_to 'remove_from_cart', remove_from_cart_path(item.id), method: :delete%></p>
+        <%end%>
+    </ul>
+</details>
+
+
 <h3>Filter Items</h3>
     <%= form_tag("/items", method: "get") do%>
         <%= select_tag "store", options_from_collection_for_select(@stores, "id", "name"), include_blank: true%>
@@ -37,6 +48,14 @@
 
     <label>Store:</label>
     <%=item.store.name%> <br><br>
+
+    <% if @cart.include?(item) %>
+    <p>Added to cart</p>
+    <p><%= link_to 'remove_from_cart', remove_from_cart_path(item.id), method: :delete%></p>
+    <%else%>
+    <p><%= link_to 'add_to_cart', add_to_cart_path(item.id), method: :post%></p>
+    <%end%>
+
 <%end%>
 </ul>
 
