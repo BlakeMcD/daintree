@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_112830) do
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "name"
     t.string "category"
     t.string "sub_category"
     t.integer "stock"
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2021_10_23_112830) do
     t.string "description"
     t.string "size"
     t.string "gender"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
