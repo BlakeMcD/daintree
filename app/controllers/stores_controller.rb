@@ -1,9 +1,12 @@
 class StoresController < ApplicationController
-    # before_action :require_login, :except => [:index, :show]
+    before_action :require_admin_login, :except => [:index, :show]
+    # skip_before_action :require_admin_login, only: [:index]
+
 
 
     def index
         @stores = Store.all
+        # return head(:forbidden) unless session.include? :admin_name
     end
 
     def show
@@ -12,6 +15,7 @@ class StoresController < ApplicationController
 
     def new
         @store = Store.new
+        # raise session.inspect
     end
 
     def create
@@ -30,11 +34,11 @@ class StoresController < ApplicationController
         redirect_to stores_path
     end
 
-    # def require_login
-    #     return_head(:forbidden) unless session.include? :store_name
-    # end
-
     private
+
+    def require_admin_login
+        return head(:forbidden) unless session.include? :admin_name
+    end
 
     def store_params
         params.require(:store).permit(:name, :description)

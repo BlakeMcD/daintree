@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :require_admin_login
 
     def index
         @users = User.all
@@ -41,6 +42,10 @@ class UsersController < ApplicationController
     # end
 
     private 
+
+    def require_admin_login
+        return head(:forbidden) unless session.include? :admin_name
+    end
 
     def user_params
         params.require(:user).permit(

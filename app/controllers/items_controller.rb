@@ -2,6 +2,7 @@ class ItemsController < ApplicationController
     before_action :initialize_session
     before_action :increment_visit_count
     before_action :load_cart
+    before_action :require_admin_login, :except => [:index, :show]
 
     def about
     end
@@ -107,5 +108,11 @@ class ItemsController < ApplicationController
     def item_params
         params.require(:item).permit(:name, :category, :sub_category, :stock, :price_cents, :description,:size, :gender, :img_url, :store_id)
     end
+
+    def require_admin_login
+        return head(:forbidden) unless session.include? :admin_name
+    end
+
+    
 
 end
