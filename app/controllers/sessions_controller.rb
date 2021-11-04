@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
 
     def create 
         # raise params.inspect
-        session[:username] = params[:username]
-        redirect_to "/"
+        session[:admin_name] = params[:admin_name]
     end
 
     def destroy
-        session.delete :username
+        session.delete :admin_name
+        redirect_to items_path  #gotta fix this. 
       end
 
 

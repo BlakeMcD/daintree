@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #User Session
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
-  post "/logout", to: "sessions#destroy"
+  get "/logout", to: "sessions#destroy"
 
   #Add to cart
   get 'about', to: 'items#about' #is this necessary??
