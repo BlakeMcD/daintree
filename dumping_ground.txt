@@ -32,3 +32,30 @@ How to make a search where it matches both conditions,
 
 THIS IMAGE CODE WORKS:
 <img src=<%=item.img_url%>>
+
+
+What I deleted from the original admin form
+<form method='post'%>
+    <input name='admin_name'>
+    <input type='submit' value='login'>
+</form>
+
+The wip session form: 
+<%= form_for @user, controller: 'sessions', action: 'create' do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "create" %>
+<% end %>
+
+
+Aesthetic Inspiration
+https://www.universalstore.com/mens-store
+
+COLOUR PALETTE
+DARK = #191919
+WHITE = #ffffff
+FADED GOLD = efe9ce

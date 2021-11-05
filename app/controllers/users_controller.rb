@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :require_admin_login
+    # before_action :require_admin_login
 
     def index
         @users = User.all
@@ -13,12 +13,13 @@ class UsersController < ApplicationController
     def new
         @user = User.new
         # Create Stubs
-        @user.address.build(address_type: 'work')
+        @user.build_address(address_type: 'work')
     end
 
     def create
-        @user = User.new(user_params)
-        @user.save
+        # @user = User.new(user_params)
+        # @user.save
+        User.create(user_params)
         redirect_to users_path
     end
 
@@ -49,6 +50,8 @@ class UsersController < ApplicationController
 
     def user_params
         params.require(:user).permit(
+            :username, 
+            :password,
             :first_name, 
             :last_name, 
             :email, 
